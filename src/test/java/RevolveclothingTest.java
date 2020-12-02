@@ -17,6 +17,7 @@ public class RevolveclothingTest {
 
     @BeforeMethod(alwaysRun = true)
     public void driverInitiate(){
+        System.setProperty("webdriver.chrome.driver","C:\\\\chromedriver.exe");
         ChromeOptions option = new ChromeOptions();
         option.addArguments("--window-size=1200,800");
         driver = new ChromeDriver(option);
