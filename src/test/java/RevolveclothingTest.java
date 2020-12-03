@@ -26,13 +26,13 @@ public class RevolveclothingTest {
     @Test
     public void addShoesToBagTest() throws InterruptedException {
         driver.get("https://www.revolve.com/women/?navsrc=main");
-        WebElement closeBanner = new WebDriverWait(driver, 10)
+        WebElement closeBanner = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfElementLocated(By
                         .xpath("//*[@id='ntf_dialog_close']")));
 
         closeBanner.click();
 
-        WebElement inputString = new WebDriverWait(driver, 10)
+        WebElement inputString = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfElementLocated(By.
                         xpath("//*[@id='search_term_new']")));
 
@@ -40,17 +40,17 @@ public class RevolveclothingTest {
 
         inputString.sendKeys(Keys.ENTER);
 
-        WebElement pickShoesButton = new WebDriverWait(driver, 10)
+        WebElement pickShoesButton = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfElementLocated(By.
                         xpath("//*[@id='VANX-UZ2']/div/div/a[1]")));
         pickShoesButton.click();
 
-        WebElement pichSizeButton = new WebDriverWait(driver, 10)
+        WebElement pichSizeButton = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfElementLocated(By.
                         xpath("//*[@id='size-ul']/li[1]/label")));
         pichSizeButton.click();
 
-        WebElement addToBagButton = new WebDriverWait(driver, 10)
+        WebElement addToBagButton = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfElementLocated(By.
                         xpath("//*[@id='addtobagbutton']")));
 
@@ -58,7 +58,7 @@ public class RevolveclothingTest {
 
         driver.get("https://www.revolve.com/r/ShoppingBag.jsp?navsrc=header");
 
-        List<WebElement> bagItems = new WebDriverWait(driver, 10)
+        List<WebElement> bagItems = new WebDriverWait(driver, 3)
                 .until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.
                         xpath("//*[@id='bag_item_VANX-UZ2_Mens_4_Womens_5_5']")));
 
